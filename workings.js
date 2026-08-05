@@ -66,7 +66,7 @@ function stopalltracks() {
     }
     else if (trackLoaded === 'none') {
         document.getElementById('trackinfo').textContent = 'No track loaded!';
-        document.getElementById(placeholder).style.display = 'block';
+        if (placeholder) placeholder.style.display = 'block';
     }
     else if (trackstopped === 'false') {
         document.getElementById('trackinfo').textContent = 'Track stopped';
@@ -91,7 +91,7 @@ function resetalltracks() {
 function unloadtrack() {
     stopalltracks();
     trackLoaded = 'none';
-    document.getElementById('trackinfo').textContent = 'Track unloaded';7
+    document.getElementById('trackinfo').textContent = 'Track unloaded';
     hideallvideos();
     if (placeholder) placeholder.style.display = 'block';
 }
@@ -105,7 +105,6 @@ function load_Techno() {
 }
 
 function load_Retro() {
-    // Code to load Retro track
     trackLoaded = 'retro';
     document.getElementById('trackinfo').textContent = 'Retro track loaded';
     hideallvideos();
@@ -114,11 +113,9 @@ function load_Retro() {
         smretrovideo.currentTime = 0;
         smretrovideo.pause();
     }
-    document.getElementById('trackinfo').textContent = 'Techno track loaded';
 }
 
 function load_Techno() {
-    // Code to load Techno track
     trackLoaded = 'techno';
     document.getElementById('trackinfo').textContent = 'Techno track loaded';
     hideallvideos();
@@ -127,7 +124,20 @@ function load_Techno() {
         smtechnovideo.currentTime = 0;
         smtechnovideo.pause();
     }
-    document.getElementById('trackinfo').textContent = 'Techno track loaded';
+}
+
+function load_Electronic() {
+    trackLoaded = 'none';
+    hideallvideos();
+    if (placeholder) placeholder.style.display = 'block';
+    document.getElementById('trackinfo').textContent = 'Electronic track not available yet';
+}
+
+function load_Rock() {
+    trackLoaded = 'none';
+    hideallvideos();
+    if (placeholder) placeholder.style.display = 'block';
+    document.getElementById('trackinfo').textContent = 'Rock track not available yet';
 }
 // function code to load techno track
 
@@ -159,7 +169,7 @@ function playtrack(){
 
     else if (trackLoaded === 'none') {
         document.getElementById('trackinfo').textContent = 'No track loaded!';
-        document.getElementById(placeholder).style.display = 'block';
+        if (placeholder) placeholder.style.display = 'block';
     }
 }
 
