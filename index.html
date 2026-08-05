@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunez.com</title>
+    <script src="workings.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <video id="placeholder" src="/folders/videos/Placeholder.mp4" muted autoplay loop playsinline></video>
+     <video id="smretrovideo" src="/folders/videos/Scrap Mechanic Retro Video.mp4" muted playsinline style="display: none;"></video>
+     <video id="smtechnovideo" src="/folders/videos/Scrap Mechanic Techno Video.mp4" muted playsinline style="display: none;"></video>
+    <div id="title">
+        <h1>Welcome to Tunez.com!</h1>
+        <p>Your one-stop shop for all your music needs!</p>
+    </div>
+
+    <div id="music-container">
+
+        <div id="music-player">
+        <button id="play-button" onclick="playtrack()">Play</button>
+        <button id="pause-button" onclick="stopalltracks()">Pause</button>
+        <button id="stop-button" onclick="resetalltracks()">Reset</button>
+        <button id="unload-button" onclick="unloadtrack()">Unload Track</button>
+        </div>
+
+        <div id="track-info-container">
+        <h3>Track Info</h3>
+        <p id="trackinfo">No track loaded</p>
+        </div>
+
+        <div id="music-list">
+            <h2>Available Songs</h2>
+            <ul>
+                <li>
+                    <button onclick="load_Techno()">Load Track</button>
+                    techno - Scrap Mechanic Radio
+                </li>
+                <li>
+                    <button onclick="load_Retro()">Load Track</button>
+                    retro - Scrap Mechanic Radio
+                </li>
+                <li>
+                    <button onclick="load_Electronic()">Load Track</button>
+                    electronic - Synthwave
+                </li>
+                <li>
+                    <button onclick="load_Rock()">Load Track</button>
+                    rock - Classic Rock
+                </li>
+            </ul>
+
+
+
+    </div>
+
+
+</body>
