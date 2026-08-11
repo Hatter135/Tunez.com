@@ -49,8 +49,19 @@ max-height: none;
   pointer-events: none;
 }
 
+#hotcarvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Make page content render above the video */
-body > *:not(#placeholder):not(#smretrovideo) :not(#smtechnovideo) {
+body > *:not(#placeholder):not(#smretrovideo):not(#smtechnovideo):not(#hotcarvideo) {
 position: relative;
 z-index: 1;
 }
@@ -71,3 +82,4 @@ body {
   margin: 0;
   padding: 0;
 }
+

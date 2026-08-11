@@ -9,8 +9,9 @@
 </head>
 <body>
      <video id="placeholder" src="folders/videos/Placeholder.mp4" muted autoplay loop playsinline></video>
-     <video id="smretrovideo" src="folders/videos/Scrap Mechanic Retro Video.mp4" muted playsinline style="display: none;"></video>
-     <video id="smtechnovideo" src="folders/videos/Scrap Mechanic Techno Video.mp4" muted playsinline style="display: none;"></video>
+     <video id="smretrovideo" src="folders/videos/Scrap-Mechanic-Retro-Video.mp4" muted playsinline style="display: none;"></video>
+     <video id="smtechnovideo" src="folders/videos/Scrap-Mechanic-Techno-Video.mp4" muted playsinline style="display: none;"></video>
+     <video id="hotcarvideo" src="folders/videos/Hot-Car-Video.mp4" muted playsinline style="display: none;"></video>
     <div id="title">
         <h1>Welcome to Tunez.com!</h1>
         <p>Your one-stop shop for all your music needs!</p>
@@ -23,6 +24,8 @@
         <button id="pause-button" onclick="stopalltracks()">Pause</button>
         <button id="stop-button" onclick="resetalltracks()">Reset</button>
         <button id="unload-button" onclick="unloadtrack()">Unload Track</button>
+        <label for="volume-slider">Volume:</label>
+        <input type="range" id="volume-slider" min="0" max="100" step="5" value="50">
         </div>
 
         <div id="track-info-container">
@@ -31,22 +34,22 @@
         </div>
 
         <div id="music-list">
-            <h2>Available Songs</h2>
+            <h2>Chill Songs</h2>
             <ul>
                 <li>
-                    <button onclick="load_Techno()">Load Track</button>
-                    techno - Scrap Mechanic Radio
+                    <button id="techno-button" onclick="load_Techno()">Load Track</button>
+                    Techno - Scrap Mechanic Radio
                 </li>
                 <li>
-                    <button onclick="load_Retro()">Load Track</button>
-                    retro - Scrap Mechanic Radio
+                    <button id="retro-button" onclick="load_Retro()">Load Track</button>
+                    Retro - Scrap Mechanic Radio
                 </li>
                 <li>
-                    <button onclick="load_Electronic()">Load Track</button>
-                    electronic - Synthwave
+                    <button id="hotcar-button" onclick="load_Hot_Car()">Load Track</button>
+                    Hot Car - NinjaBaka
                 </li>
                 <li>
-                    <button onclick="load_Rock()">Load Track</button>
+                    <button id="rock-button" onclick="load_Rock()">Load Track</button>
                     rock - Classic Rock
                 </li>
             </ul>
